@@ -81,9 +81,7 @@ function HomePage() {
             <h1>EcoLix+</h1>
             <h2>Nutrimos la tierra, reducimos tus costos</h2>
             <p>
-              Descubra nuestro lixiviado ecológico premium que mejora la calidad de su 
-              suelo y aumenta el rendimiento de sus cultivos de manera natural y 
-              sostenible.
+              EcolixiPlus es una línea de biofertilizantes naturales elaborados a partir de lixiviados de cáscaras de plátano, papa y huevo. Nuestro objetivo es crear una agricultura más sostenible, reducir residuos y cuidar la salud de tus plantas con soluciones innovadoras, accesibles y amigables con el medio ambiente.
             </p>
             {/* El botón se movió a la sección de producto */}
           </div>
