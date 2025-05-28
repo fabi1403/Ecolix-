@@ -65,8 +65,8 @@
   display: flex; /* Oculto por defecto en pantallas grandes */
   flex-direction: column;
   cursor: pointer;
-  gap: 5px; /* Espacio entre las líneas del hamburguesa */
-  padding: 25px; /* Área de toque */
+  gap: 3px; /* Espacio entre las líneas del hamburguesa */
+  padding: 100px; /* Área de toque */
 }
 
 .hamburger span {
