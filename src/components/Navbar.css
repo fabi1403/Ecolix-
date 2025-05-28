@@ -62,7 +62,7 @@
 
 /* Estilos del menú hamburguesa */
 .hamburger {
-  display: none; /* Oculto por defecto en pantallas grandes */
+  display: flex; /* Oculto por defecto en pantallas grandes */
   flex-direction: column;
   cursor: pointer;
   gap: 5px; /* Espacio entre las líneas del hamburguesa */
@@ -93,7 +93,7 @@
 /* Media Query para tabletas y móviles */
 @media (max-width: 768px) {
   .navbar-fbn-logo {
-    display: none; /* Ocultar el logo FBN en móviles para no saturar */
+    display: flex; /* Ocultar el logo FBN en móviles para no saturar */
   }
 
   .navbar-links {
