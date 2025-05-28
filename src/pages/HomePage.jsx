@@ -19,24 +19,34 @@ const PiggyBankIcon = () => (
 function HomePage() {
   const products = [
     {
-      name: 'Lixiviado Verde',
-      description: 'Lixiviado de alta calidad para nutrir tus plantas.',
-      image: '/lixi.png'
+      name: '🌱Ecolixi-NBiofertilizante',
+      description: 'Biofertilizante para crecimiento de hojas y tallos. Ayuda a plantas con hojas amarillas o poco desarrollo.',
+      image: '/lixi.png',
+      ingredients: 'Cáscara de papa (nitrógeno) 🧴'
     },
     {
-      name: 'Lixiviado Blanco',
-      description: 'Lixiviado concentrado para un crecimiento vigoroso.',
-      image: '/lixi.png'
+      name: '🌸Ecolixi-P',
+      description: 'Estimula floración y producción de frutos. Ideal para plantas con hojas moradas o desarrollo lento.',
+      image: '/lixi.png',
+      ingredients: 'Fósforo natural 🧴'
     },
     {
-      name: 'Lixiviado Morado',
-      description: 'Lixiviado especial para floración y fructificación.',
-      image: '/lixi.png'
+      name: '🌻Ecolixi-K',
+      description: 'Mejora resistencia, floración y defensa. Fortalece plantas con bordes amarillos o secos.',
+      image: '/lixi.png',
+      ingredients: 'Cáscara de plátano (potasio) 🧴'
     },
     {
-      name: 'Lixiviado Azul',
-      description: 'Lixiviado para mejorar la resistencia de tus cultivos.',
-      image: '/lixi.png'
+      name: '🌿Ecolixi-Ca',
+      description: 'Fortalece tallos, raíces y hojas. Previene deformaciones y necrosis.',
+      image: '/lixi.png',
+      ingredients: 'Cáscara de huevo (calcio) 🧴'
+    },
+    {
+      name: '🌎Ecolixi-Balance',
+      description: 'Fórmula integral para plantas sanas. Aporta nutrientes completos para todas las etapas.',
+      image: '/lixi.png',
+      ingredients: 'Mezcla de cáscaras 🧴'
     }
   ];
 
