@@ -1,0 +1,134 @@
+.navbar {
+  background-color: #222222; /* Consolidado al color oscuro principal */
+  padding: 0px 30px; /* Ajustado padding */
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+  position: fixed; /* Fijar la navbar en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px; /* Altura estándar para mejor visualización y toque */
+}
+
+.navbar-logo img {
+  height: 50px; /* Ajusta según el tamaño de tu logo */
+  vertical-align: middle;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0; /* Eliminar margen por defecto */
+  padding: 0; /* Eliminar padding por defecto */
+  margin-left: auto; /* Empujar los enlaces a la derecha */
+  transform: translateX(-2cm); /* Mover 2cm a la izquierda */
+}
+
+.navbar-fbn-logo {
+  position: absolute; /* Posicionamiento absoluto para centrar */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  opacity: 0.2; /* 10% de transparencia */
+}
+
+.navbar-fbn-logo img {
+  height: 40px; /* Ajusta el tamaño del logo FBN */
+  width: auto;
+}
+
+.navbar-links li {
+  margin-left: 20px; /* Espacio entre los elementos de la lista */
+}
+
+.navbar-links a {
+  color: #FFFFFF; /* Color de texto blanco para enlaces */
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold; /* Texto en negrita */
+}
+
+.navbar-links a:hover,
+.navbar-links a:focus,
+.navbar-links a.active { /* Estilo para el enlace activo */
+  background-color: #FFD700; /* Fondo dorado para hover/focus/active */
+  color: #222222; /* Texto oscuro para contraste sobre dorado */
+  font-weight: bold; /* Mantener negrita */
+}
+
+/* Estilos del menú hamburguesa */
+.hamburger {
+  display: none; /* Oculto por defecto en pantallas grandes */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px; /* Espacio entre las líneas del hamburguesa */
+  padding: 10px; /* Área de toque */
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación para el menú hamburguesa abierto */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Query para tabletas y móviles */
+@media (max-width: 768px) {
+  .navbar-fbn-logo {
+    display: none; /* Ocultar el logo FBN en móviles para no saturar */
+  }
+
+  .navbar-links {
+    display: none; /* Ocultar los enlaces por defecto */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Debajo de la navbar, ajustado a la nueva altura */
+    left: 0;
+    background-color: #222222; /* Mismo fondo que la navbar */
+    padding: 10px 0; /* Padding vertical */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para el menú desplegado */
+    margin-left: 0; /* Resetear margen en móvil */
+  }
+
+  .navbar-links.open {
+    display: flex; /* Mostrar cuando el menú está abierto */
+  }
+
+  .navbar-links li {
+    margin-left: 0; /* Resetear margen */
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 15px 0; /* Más padding para mejor toque */
+    width: 100%;
+    border-radius: 0; /* Sin bordes redondeados en móvil */
+  }
+
+  /* No es necesario repetir los estilos de hover/focus/active aquí si son los mismos */
+
+  .hamburger {
+    display: flex; /* Mostrar el icono de hamburguesa */
+  }
+}

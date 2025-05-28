@@ -1,0 +1,8 @@
+.global-header-image {
+  width: 100%;
+  height: auto; /* Adjust as needed, e.g., 150px */
+  object-fit: cover; /* Or 'contain', depending on desired effect */
+  display: block; /* To remove any extra space below the image */
+}
+
+/* Adjust paddingTop in App.jsx's main content div if this header takes up significant space */
