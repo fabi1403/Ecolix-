@@ -1,63 +1,135 @@
 .navbar {
-  background-color: #222222; /* Consolidado al color oscuro principal */
-  padding: 0px 30px; /* Ajustado padding */
+  background-color: #222222;
+  padding: 0px 30px;
   display: flex;
-  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
-  position: fixed; /* Fijar la navbar en la parte superior */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  height: 70px; /* Altura estándar para mejor visualización y toque */
+  height: 70px;
 }
 
 .navbar-logo img {
-  height: 50px; /* Ajusta según el tamaño de tu logo */
+  height: 50px;
   vertical-align: middle;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  margin: 0; /* Eliminar margen por defecto */
-  padding: 0; /* Eliminar padding por defecto */
-  margin-left: auto; /* Empujar los enlaces a la derecha */
-  transform: translateX(-2cm); /* Mover 2cm a la izquierda */
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  transform: translateX(-2cm); /* Si deseas también mover más, puedes aumentar aquí */
 }
 
 .navbar-fbn-logo {
-  position: absolute; /* Posicionamiento absoluto para centrar */
+  position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centrar horizontalmente */
-  opacity: 0.2; /* 10% de transparencia */
+  transform: translateX(-50%);
+  opacity: 0.2;
 }
 
 .navbar-fbn-logo img {
-  height: 40px; /* Ajusta el tamaño del logo FBN */
+  height: 40px;
   width: auto;
 }
 
 .navbar-links li {
-  margin-left: 20px; /* Espacio entre los elementos de la lista */
+  margin-left: 20px;
 }
 
 .navbar-links a {
-  color: #FFFFFF; /* Color de texto blanco para enlaces */
+  color: #FFFFFF;
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: bold; /* Texto en negrita */
+  font-weight: bold;
 }
 
 .navbar-links a:hover,
 .navbar-links a:focus,
-.navbar-links a.active { /* Estilo para el enlace activo */
-  background-color: #FFD700; /* Fondo dorado para hover/focus/active */
-  color: #222222; /* Texto oscuro para contraste sobre dorado */
-  font-weight: bold; /* Mantener negrita */
+.navbar-links a.active {
+  background-color: #FFD700;
+  color: #222222;
+  font-weight: bold;
+}
+
+/* Estilos del menú hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 10px;
+  transform: translateX(-95px); /* Movimiento de 95px hacia la izquierda */
+}
+
+.hamburger span {
+  height: 10px;
+  width: 45px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación para el menú hamburguesa abierto */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Query para tabletas y móviles */
+@media (max-width: 768px) {
+  .navbar-fbn-logo {
+    display: none; /* Ocultar el logo FBN en móviles */
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #222222;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-left: 0;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
 /* Estilos del menú hamburguesa */
