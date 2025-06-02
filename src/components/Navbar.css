@@ -62,12 +62,11 @@
 
 /* Estilos del menú hamburguesa */
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
-  padding: 10px;
-  transform: translateX(-95px); /* Movimiento de 95px hacia la izquierda */
+  gap: 10px;
+  padding: 200px;
 }
 
 .hamburger span {
@@ -94,7 +93,7 @@
 /* Media Query para tabletas y móviles */
 @media (max-width: 768px) {
   .navbar-fbn-logo {
-    display: none; /* Ocultar el logo FBN en móviles */
+    display: flex; /* Ocultar el logo FBN en móviles */
   }
 
   .navbar-links {
@@ -134,17 +133,17 @@
 
 /* Estilos del menú hamburguesa */
 .hamburger {
-  display: none; /* Oculto por defecto en pantallas grandes */
+  display: flex; /* Oculto por defecto en pantallas grandes */
   flex-direction: column;
   cursor: pointer;
   gap: 5px; /* Espacio entre las líneas del hamburguesa */
-  padding: 200px; /* Área de toque */
+  padding: 75px; /* Área de toque */
 }
 
 .hamburger span {
   height: 10px;
   width: 45px;
-  background-color: #FFFFFF;
+  background-color: #421616;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
 }
