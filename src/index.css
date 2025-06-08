@@ -1,0 +1,16 @@
+/* Estilos globales para EcoLix+ */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white; /* Set text color to white for better contrast with the new background */
+  line-height: 1.6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Puedes agregar más estilos globales aquí */

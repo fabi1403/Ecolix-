@@ -1,0 +1,138 @@
+.recommendations-page-container {
+  padding: 90px 20px 40px 20px; /* Ajustado para navbar fija */
+  text-align: center;
+  color: var(--recommendations-text-color);
+  font-family: 'Arial', sans-serif;
+  min-height: calc(100vh - 130px); /* 90px padding top + 40px padding bottom */
+}
+
+.recommendations-main-title {
+  font-size: 2.5em;
+  color: var(--recommendations-highlight-color);
+  margin-bottom: 15px;
+}
+
+.recommendations-sub-title {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.recommendations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+}
+
+.recommendation-card {
+  background: var(--recommendations-card-background);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido de la tarjeta */
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.recommendation-image {
+  width: 80px; /* Tamaño del logo/imagen */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  background-color: var(--recommendations-image-placeholder-background);
+  border-radius: 50%; /* Hacerlo circular */
+  padding: 5px; /* Espacio si la imagen es más pequeña que el círculo */
+}
+
+.recommendation-title {
+  font-size: 1.4em;
+  color: var(--recommendations-highlight-color);
+  margin-bottom: 10px;
+}
+
+.recommendation-text {
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--recommendations-text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recommendations-page-container {
+    padding: 80px 15px 20px 15px;
+  }
+
+  .recommendations-main-title {
+    font-size: 2em;
+  }
+
+  .recommendations-sub-title {
+    font-size: 1em;
+  }
+
+  .recommendations-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .recommendation-card {
+    padding: 20px;
+  }
+
+  .recommendation-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .recommendation-title {
+    font-size: 1.2em;
+  }
+
+  .recommendation-text {
+    font-size: 0.9em;
+  }
+}
+
+/* Emoji animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+.emoji-animated {
+  display: inline-block;
+  animation: bounce 1s infinite;
+}
+
+.emoji-animated.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.emoji-animated.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.emoji-animated.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.emoji-animated.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.emoji-animated.delay-5 {
+  animation-delay: 0.5s;
+}
